@@ -1,0 +1,22 @@
+<div>
+    <div>
+      <section>
+        <div>
+          <div>
+            <ul class="nav nav-tabs" >
+              <li *ngFor="let step of steps" role="presentation" [class.active]="step.active">
+                <a href="#" (click)="selectStep(step)" title="{{ step.title }}">
+                  <span>
+                    <i [class]="step.icon"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ng-content></ng-content>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
